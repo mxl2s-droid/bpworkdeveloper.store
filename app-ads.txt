@@ -1,4 +1,1 @@
-# app-ads.txt for FlashDrama - Reel Shorts TV
-# Replace the publisher IDs below with your actual IDs from each ad network.
-
 google.com, pub-9810103125668773, DIRECT, f08c47fec0942fa0
