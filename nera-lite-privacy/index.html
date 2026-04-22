@@ -15,7 +15,158 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/nera-lite-privacy/styles.css" />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f5f7;
+        --panel: rgba(255, 255, 255, 0.78);
+        --panel-border: rgba(15, 23, 42, 0.08);
+        --text: #1d1d1f;
+        --muted: #6e6e73;
+        --accent: #0071e3;
+        --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+        --radius: 28px;
+        --max-width: 940px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top, rgba(0, 113, 227, 0.08), transparent 38%),
+          linear-gradient(180deg, #fbfbfd 0%, var(--bg) 100%);
+        line-height: 1.65;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .background-glow {
+        position: fixed;
+        inset: -10% auto auto 50%;
+        width: 42rem;
+        height: 42rem;
+        transform: translateX(-50%);
+        background: radial-gradient(circle, rgba(0, 113, 227, 0.14), rgba(255, 255, 255, 0));
+        pointer-events: none;
+        filter: blur(12px);
+      }
+
+      .page {
+        position: relative;
+        z-index: 1;
+        width: min(calc(100% - 2rem), var(--max-width));
+        margin: 0 auto;
+        padding: 48px 0 72px;
+      }
+
+      .card {
+        background: var(--panel);
+        backdrop-filter: saturate(180%) blur(24px);
+        -webkit-backdrop-filter: saturate(180%) blur(24px);
+        border: 1px solid var(--panel-border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 30px;
+        margin-bottom: 18px;
+      }
+
+      .hero {
+        padding: 44px 32px;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        letter-spacing: -0.03em;
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 6vw, 4.4rem);
+        line-height: 1.02;
+      }
+
+      h2 {
+        font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+        margin-bottom: 14px;
+      }
+
+      .lead,
+      p,
+      li {
+        color: var(--muted);
+      }
+
+      .lead {
+        font-size: 1.08rem;
+        max-width: 50rem;
+        margin: 18px 0 0;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+        margin-top: 20px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      ul {
+        margin: 12px 0 0;
+        padding-left: 1.2rem;
+      }
+
+      li + li {
+        margin-top: 0.55rem;
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          width: min(calc(100% - 1rem), var(--max-width));
+          padding: 18px 0 44px;
+        }
+
+        .card {
+          border-radius: 22px;
+          padding: 22px 18px;
+          margin-bottom: 14px;
+        }
+
+        .hero {
+          padding: 28px 20px;
+        }
+
+        .lead {
+          font-size: 1rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="background-glow" aria-hidden="true"></div>
